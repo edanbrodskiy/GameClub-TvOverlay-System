@@ -1,0 +1,47 @@
+{
+  "serial": "192.168.10.53:5555",
+  "checks": [
+    "Foreground service confirmed independently by Android dumpsys",
+    "15m / 5m / 1m / 30s cards; repeated previews keep exactly one window without changing focus",
+    "Transient corner warning disappears automatically after 10 seconds",
+    "Real countdown crosses the 60s and 30s boundaries and selects the correct notices",
+    "Expiration shows TIME IS UP; extension hides it; Hide cancels the new deadline",
+    "Extending an active session invalidates its previous expiration",
+    "Hide cancels the demo before its next scheduled warning",
+    "Original application/input focus preserved through all timer tests"
+  ],
+  "screenshots": {
+    "notice-900": "Firmware returned no PNG while HDMI active",
+    "notice-300": "Firmware returned no PNG while HDMI active",
+    "notice-60": "Firmware returned no PNG while HDMI active",
+    "notice-30": "Firmware returned no PNG while HDMI active"
+  },
+  "hdmi_visually_verified": false,
+  "focus_before": "com.tcl.tv/com.tcl.tv.TVActivity",
+  "active_inputs_before": [
+    "com.tcl.tvinput/.TvPassThroughService/HDMI400004"
+  ],
+  "focus_after": "com.tcl.tv/com.tcl.tv.TVActivity",
+  "active_inputs_after": [
+    "com.tcl.tvinput/.TvPassThroughService/HDMI400004"
+  ],
+  "success": true,
+  "final_state": {
+    "version": "0.2.0-timers",
+    "service_running": true,
+    "foreground_service": true,
+    "visible": false,
+    "pending_show": false,
+    "uptime_seconds": 90,
+    "width": 0,
+    "height": 0,
+    "notice_visible": false,
+    "notice_threshold_seconds": null,
+    "timer_state": "IDLE",
+    "session_id": null,
+    "expires_at_utc_millis": null,
+    "remaining_seconds": 0,
+    "demo_running": false,
+    "last_error": null
+  }
+}
