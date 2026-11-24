@@ -3,6 +3,29 @@
 Пакет приложения: `pt.mvplisboa.sessionoverlay`. Проверенное устройство:
 TCL Smart TV Pro / G08, Android 12 / API 31, `192.168.10.53:5555`, PS5 на HDMI 4.
 
+## Установка из GitHub Release
+
+Откройте [v0.2.1-compact](https://github.com/edanbrodskiy/GameClub-TvOverlay-System/releases/tag/v0.2.1-compact)
+и скачайте `mvp-session-overlay-0.2.1-compact-debug.apk`,
+`mvp-session-overlay-0.2.1-compact-source.zip` и `SHA256SUMS` в одну папку.
+На macOS/Linux проверьте файлы из этой папки:
+
+```bash
+shasum -a 256 -c SHA256SUMS
+unzip mvp-session-overlay-0.2.1-compact-source.zip
+cd mvp-session-overlay-0.2.1-compact
+export MVP_ADB_SERIAL=192.168.10.53:5555
+export MVP_APK_PATH="$(cd .. && pwd)/mvp-session-overlay-0.2.1-compact-debug.apk"
+./scripts/tv.sh connect
+./scripts/tv.sh install
+./scripts/tv.sh setup
+```
+
+Укажите адрес своего телевизора в `MVP_ADB_SERIAL`. На телевизоре должны быть
+включены ADB debugging и разрешён доступ с вашего компьютера.
+Нужны ADB и Bash; JDK, SDK для сборки и Android Studio для готового APK не требуются.
+Далее разрешите Display over other apps и выполните `activate` и `status`, как описано ниже.
+
 ## Подготовка и установка
 
 Включите ADB debugging на телевизоре и подключите Mac к той же LAN.

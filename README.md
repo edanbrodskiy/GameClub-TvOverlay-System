@@ -7,6 +7,16 @@ Android TV-приложение для MVP Lisboa: полноэкранный TI
 Показ поверх PS5 на HDMI 4 и восстановление изображения после скрытия подтверждены
 на TCL Smart TV Pro, Android 12. Подробности — в [результатах испытаний](docs/TEST_RESULTS.md).
 
+## Скачать готовую версию
+
+[Релиз v0.2.1-compact](https://github.com/edanbrodskiy/GameClub-TvOverlay-System/releases/tag/v0.2.1-compact)
+содержит готовый APK, полный архив исходников и `SHA256SUMS` для проверки загрузки.
+Для установки APK сборка и Android Studio не нужны; достаточно ADB.
+Порядок установки — в [инструкции](docs/INSTALLATION.md#установка-из-github-release).
+
+Это автономный MVP для локальной установки на Android TV. APK подписан debug-ключом
+и включает защищённое управление через ADB; интеграция с оплатой и ggLeap пока отсутствует.
+
 ## Быстрый запуск
 
 Нужны JDK 17, Android SDK Platform 34, Build Tools 34.0.0. Для работы с ТВ — ADB,

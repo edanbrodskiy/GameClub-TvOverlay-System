@@ -94,12 +94,19 @@ python3 scripts/timer_smoke_test.py --serial 192.168.10.53:5555 --artifacts arti
 Таймер APK пока не связан с оплатой/ggLeap. При перезапуске процесса он сбрасывается,
 ложная блокировка не восстанавливается.
 
-APK: [mvp-session-overlay-0.2.1-compact-debug.apk](../dist/mvp-session-overlay-0.2.1-compact-debug.apk).
+APK: [mvp-session-overlay-0.2.1-compact-debug.apk](https://github.com/edanbrodskiy/GameClub-TvOverlay-System/releases/download/v0.2.1-compact/mvp-session-overlay-0.2.1-compact-debug.apk).
+
+Для GitHub Release APK собран повторно из текущих исходников: все 11 JVM-тестов
+пройдены, Android Lint — 0 ошибок и 1 предупреждение `ExpiredTargetSdkVersion`.
+Подпись APK проверена через `apksigner`; пакет, versionCode 3 и versionName
+`0.2.1-compact` проверены через `aapt`. Подпись использует тот же debug-сертификат,
+что и предыдущая сборка. Аппаратные сценарии при подготовке релиза не повторялись;
+их результаты выше относятся к ранее выполненным испытаниям.
 
 SHA-256:
 
 ```text
-02ceedb10c70354dd530278e364f19a1c004ac8ce09a9ab9469cf8ae0ff21c87
+86adf6bd28e33a8ea0957651d65e6b609229c0423e261a2dc4e9c5dda1010297
 ```
 
 ## Упаковка проекта
